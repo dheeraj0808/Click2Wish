@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NameInput.css';
 
-const NameInput = ({ onSubmit }) => {
+const NameInput = () => {
   const [name, setName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fade in animation
@@ -18,7 +20,7 @@ const NameInput = ({ onSubmit }) => {
       setIsSubmitting(true);
       // Add a small delay for the animation
       setTimeout(() => {
-        onSubmit(name.trim());
+        navigate('/function-selection', { state: { name: name.trim() } });
       }, 500);
     }
   };
@@ -32,8 +34,8 @@ const NameInput = ({ onSubmit }) => {
           <div className="firework"></div>
         </div>
 
-        <h2 className="welcome-text">Shhh… a 2026 surprise awaits</h2>
-        <p className="subtitle">Enter your name to continue</p>
+        <h2 className="welcome-text">Welcome to Click2Wish</h2>
+        <p className="subtitle">Enter your name to explore 50+ Indian festivals & celebrations</p>
 
         <form onSubmit={handleSubmit} className="name-input-form">
           <div className="input-wrapper">
