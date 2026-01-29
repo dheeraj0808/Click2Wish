@@ -95,8 +95,18 @@ const Templates = () => {
         return null;
     }
 
+    const handleBack = () => {
+        navigate('/function-selection', { state: { name } });
+    };
+
     return (
         <div className="templates-container">
+            <button className="back-btn" onClick={handleBack}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back
+            </button>
             <div className="templates-header">
                 <h1>Choose Your Template</h1>
                 <p>Hello, {name}! Select a beautiful template for your {selectedFunction?.name || 'celebration'} wish {selectedFunction?.emoji}</p>
