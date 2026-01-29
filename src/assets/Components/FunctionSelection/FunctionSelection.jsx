@@ -193,7 +193,7 @@ const FunctionSelection = () => {
                     </svg>
                     <input
                         type="text"
-                        placeholder="Search 50+ festivals..."
+                        placeholder="Search 65+ festivals..."
                         className="search-input"
                         value={searchTerm}
                         onChange={handleSearch}
