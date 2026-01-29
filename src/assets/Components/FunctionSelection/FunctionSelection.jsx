@@ -13,6 +13,8 @@ const FunctionSelection = () => {
 
     const categories = [
         { id: 'all', name: 'All' },
+        { id: 'valentine', name: 'Valentine' },
+        { id: 'anti', name: 'Anti-Valentine' },
         { id: 'major', name: 'Major' },
         { id: 'hindu', name: 'Hindu' },
         { id: 'regional', name: 'Regional' },
@@ -21,6 +23,25 @@ const FunctionSelection = () => {
     ];
 
     const functions = [
+        // Valentine Week
+        { id: 'rose-day', name: 'Rose Day', emoji: '🌹', description: 'Feb 7 • Love Begins', color: 'linear-gradient(135deg, #ff6b9d 0%, #ff9a9e 100%)', category: 'valentine' },
+        { id: 'propose-day', name: 'Propose Day', emoji: '💍', description: 'Feb 8 • Say It', color: 'linear-gradient(135deg, #ff4d6d 0%, #ff758f 100%)', category: 'valentine' },
+        { id: 'chocolate-day', name: 'Chocolate Day', emoji: '🍫', description: 'Feb 9 • Sweet Wishes', color: 'linear-gradient(135deg, #7f5539 0%, #b08968 100%)', category: 'valentine' },
+        { id: 'teddy-day', name: 'Teddy Day', emoji: '🧸', description: 'Feb 10 • Cute & Cozy', color: 'linear-gradient(135deg, #ffd6a5 0%, #ffb703 100%)', category: 'valentine' },
+        { id: 'promise-day', name: 'Promise Day', emoji: '🤝', description: 'Feb 11 • Forever', color: 'linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%)', category: 'valentine' },
+        { id: 'hug-day', name: 'Hug Day', emoji: '🤗', description: 'Feb 12 • Warmth', color: 'linear-gradient(135deg, #00b894 0%, #55efc4 100%)', category: 'valentine' },
+        { id: 'kiss-day', name: 'Kiss Day', emoji: '💋', description: 'Feb 13 • Romance', color: 'linear-gradient(135deg, #e84393 0%, #fd79a8 100%)', category: 'valentine' },
+        { id: 'valentines-day', name: "Valentine's Day", emoji: '❤️', description: 'Feb 14 • Love Day', color: 'linear-gradient(135deg, #ff3d68 0%, #ff7eb3 100%)', category: 'valentine' },
+
+        // Anti-Valentine Week
+        { id: 'slap-day', name: 'Slap Day', emoji: '🖐️', description: 'Feb 15 • Move On', color: 'linear-gradient(135deg, #2d3436 0%, #636e72 100%)', category: 'anti' },
+        { id: 'kick-day', name: 'Kick Day', emoji: '🦵', description: 'Feb 16 • Let Go', color: 'linear-gradient(135deg, #1e272e 0%, #485460 100%)', category: 'anti' },
+        { id: 'perfume-day', name: 'Perfume Day', emoji: '🧴', description: 'Feb 17 • Fresh Start', color: 'linear-gradient(135deg, #0abde3 0%, #54a0ff 100%)', category: 'anti' },
+        { id: 'flirt-day', name: 'Flirt Day', emoji: '😉', description: 'Feb 18 • New Vibes', color: 'linear-gradient(135deg, #feca57 0%, #ff9f43 100%)', category: 'anti' },
+        { id: 'confession-day', name: 'Confession Day', emoji: '🗣️', description: 'Feb 19 • Speak Up', color: 'linear-gradient(135deg, #5f27cd 0%, #c8d6e5 100%)', category: 'anti' },
+        { id: 'missing-day', name: 'Missing Day', emoji: '🥺', description: 'Feb 20 • Memories', color: 'linear-gradient(135deg, #00d2d3 0%, #01a3a4 100%)', category: 'anti' },
+        { id: 'breakup-day', name: 'Breakup Day', emoji: '💔', description: 'Feb 21 • Heal & Rise', color: 'linear-gradient(135deg, #ee5253 0%, #341f97 100%)', category: 'anti' },
+
         // Major Festivals
         { id: 'diwali', name: 'Diwali', emoji: '🪔', description: 'Festival of Lights', color: 'linear-gradient(135deg, #f39c12 0%, #e74c3c 100%)', category: 'major' },
         { id: 'holi', name: 'Holi', emoji: '🎨', description: 'Festival of Colors', color: 'linear-gradient(135deg, #9b59b6 0%, #e91e63 100%)', category: 'major' },
@@ -62,7 +83,6 @@ const FunctionSelection = () => {
 
         // Cultural & Personal
         { id: 'birthday', name: 'Birthday', emoji: '🎂', description: 'Special Day', color: 'linear-gradient(135deg, #ff9ff3 0%, #feca57 100%)', category: 'cultural' },
-        { id: 'valentine', name: "Valentine's Day", emoji: '❤️', description: 'Day of Love', color: 'linear-gradient(135deg, #ff6b9d 0%, #ee5a6f 100%)', category: 'cultural' },
         { id: 'mothersday', name: "Mother's Day", emoji: '🌸', description: 'Honor Mothers', color: 'linear-gradient(135deg, #ff9ff3 0%, #feca57 100%)', category: 'cultural' },
         { id: 'fathersday', name: "Father's Day", emoji: '👨', description: 'Honor Fathers', color: 'linear-gradient(135deg, #3498db 0%, #2980b9 100%)', category: 'cultural' },
         { id: 'teachersday', name: "Teacher's Day", emoji: '👨‍🏫', description: 'Honor Teachers', color: 'linear-gradient(135deg, #3498db 0%, #f39c12 100%)', category: 'cultural' },
@@ -119,6 +139,8 @@ const FunctionSelection = () => {
     // Group functions by category for display
     const getCategoryTitle = (category) => {
         const titles = {
+            'valentine': 'Valentine Week',
+            'anti': 'Anti-Valentine Week',
             'major': 'Major Festivals',
             'hindu': 'Hindu Festivals',
             'regional': 'Regional Festivals',
