@@ -76,7 +76,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className="footer-info">
-                    <p>50+ Indian Festivals & Celebrations</p>
+                    <p>65+ Indian Festivals & Celebrations</p>
                     <p>Beautiful Templates • Easy Sharing</p>
                 </div>
             </div>
