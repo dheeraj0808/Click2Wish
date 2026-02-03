@@ -31,7 +31,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className="logo-section">
-                    <h1 className="logo-text">Click2Wish</h1>
+                    <h1 className="logo-text">click2Wish</h1>
                     <p className="tagline">Create Beautiful Festival Wishes</p>
                 </div>
 
